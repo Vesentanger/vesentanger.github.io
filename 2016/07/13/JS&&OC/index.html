@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | 梅守强的博客</title>
+  <title>关于JavaScriptCore (iOS中OC与JS交互) | 梅守强的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只iOS开发小白~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梅守强的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="iOS中OC与JS交互">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于JavaScriptCore (iOS中OC与JS交互)">
+<meta property="og:url" content="http://yoursite.com/2016/07/13/JS&&OC/index.html">
 <meta property="og:site_name" content="梅守强的博客">
-<meta property="og:description" content="一只iOS开发小白~">
+<meta property="og:description" content="iOS中OC与JS交互">
+<meta property="og:updated_time" content="2017-06-18T07:32:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梅守强的博客">
-<meta name="twitter:description" content="一只iOS开发小白~">
+<meta name="twitter:title" content="关于JavaScriptCore (iOS中OC与JS交互)">
+<meta name="twitter:description" content="iOS中OC与JS交互">
   
     <link rel="alternate" href="/atom.xml" title="梅守强的博客" type="application/atom+xml">
   
@@ -66,74 +67,133 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/21/hello-world/" class="archive-article-date">
-  <time class="post-time" datetime="2017-05-21T01:38:06.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">21</span>
-  </time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/13/JS&&OC/" class="archive-article-date">
+        <section id="main"><article id="post-JS&amp;&amp;OC" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/13/JS&&OC/" class="article-date">
   <time class="post-time" datetime="2016-07-13T09:01:38.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
     <span class="post-day">13</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/13/JS&&OC/">关于JavaScriptCore (iOS中OC与JS交互)</a>
+    <h1 class="article-title" itemprop="name">
+      关于JavaScriptCore (iOS中OC与JS交互)
     </h1>
   
 
-    </header>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS交互/">JS交互</a>
   </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2016/07/13/JS&amp;&amp;OC/" class="leancloud_visitors" data-flag-title="关于JavaScriptCore (iOS中OC与JS交互)">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#关于JavaScriptCore (iOS中OC与JS交互)</p>
+<p>##本教程中所涉及到的几种类型：</p>
+<ul>
+<li>JSContext, JSContext是代表JS的执行环境，通过-evaluateScript:方法就可以执行一JS代码</li>
+<li>JSValue, JSValue封装了JS与ObjC中的对应的类型，以及调用JS的API等</li>
+<li><p>JSExport, JSExport是一个协议，遵守此协议，就可以定义我们自己的协议，在协议中声明的API都会在JS中暴露出来，才能调用<br>ObjC与JS交互方式<br>通过JSContext，我们有两种调用JS代码的方法：</p>
+</li>
+<li><p>1、直接调用JS代码</p>
+</li>
+<li>2、在ObjC中通过JSContext注入模型，然后调用模型的方法<br>##直接调用JS代码</li>
+<li>一个JSContext对象，就类似于Js中的window，只需要创建一次即可。</li>
+<li><p>self.jsContext = [[JSContext alloc] init];<br>//  jscontext可以直接执行JS代码。<br>[self.jsContext evaluateScript:@”var num = 10”];<br>[self.jsContext evaluateScript:@”var squareFunc = function(value) { return value <em> 2 }”];<br>// 计算正方形的面积<br>JSValue </em>square = [self.jsContext evaluateScript:@”squareFunc(num)”];</p>
+</li>
+<li><p>也可以通过下标的方式获取到方法</p>
+</li>
+<li>JSValue <em>squareFunc = self.jsContext[@”squareFunc”];<br>JSValue </em>value = [squareFunc callWithArguments:@[@”20”]];<br>NSLog(@”%@”, square.toNumber);<br>NSLog(@”%@”, value.toNumber);</li>
+<li>这种方式是没有注入模型到JS中的。这种方式使用起来不太合适，通常在JS中有很多全局的函数，为了防止名字重名，使用模型的方式是最好不过了。通过我们协商好的模型名称，在JS中直接通过模型来调用我们在ObjC中所定义的模型所公开的API。<br>##通过注入模型的方式交互</li>
+<li>首先，我们需要先定义一个协议，而且这个协议必须要遵守JSExport协议。</li>
+<li>@protocol JavaScriptObjectiveCDelegate<br>// JS调用此方法来调用OC的系统相册方法<ul>
+<li>(void)callSystemCamera;<br>// 在JS中调用时，函数名应该为showAlertMsg(arg1, arg2)// 这里是只两个参数的。</li>
+<li>(void)showAlert:(NSString <em>)title msg:(NSString </em>)msg;<br>// 通过JSON传过来- (void)callWithDict:(NSDictionary <em>)params;<br>// JS调用Oc，然后在OC中通过调用JS方法来传值给JS。- (void)jsCallObjcAndObjcCallJsWithDict:(NSDictionary </em>)params;<br>@end</li>
+</ul>
+</li>
+<li>接下来，我们还需要定义一个模型：</li>
+<li>// 此模型用于注入JS的模型，这样就可以通过模型来调用方法。<br>@interface HYBJsObjCModel : NSObject<br>@property (nonatomic, weak) JSContext <em>jsContext;<br>@property (nonatomic, weak) UIWebView </em>webView;<br>@end</li>
+<li>实现这个模型：</li>
+<li>@implementation HYBJsObjCModel<ul>
+<li>(void)callWithDict:(NSDictionary *)params {<br>NSLog(@”Js调用了OC的方法，参数为：%@”, params);<br>}<br>// Js调用了callSystemCamera</li>
+<li>(void)callSystemCamera {<br>NSLog(@”JS调用了OC的方法，调起系统相册”);<br>// JS调用后OC后，又通过OC调用JS，但是这个是没有传参数的<br>JSValue *jsFunc = self.jsContext[@”jsFunc”];<br>[jsFunc callWithArguments:nil];<br>}</li>
+<li>(void)jsCallObjcAndObjcCallJsWithDict:(NSDictionary <em>)params {<br>NSLog(@”jsCallObjcAndObjcCallJsWithDict was called, params is %@”, params);<br>// 调用JS的方法<br>JSValue </em>jsParamFunc = self.jsContext[@”jsParamFunc”];<br>[jsParamFunc callWithArguments:@[@{@”age”: @10, @”name”: @”lili”, @”height”: @158}]];<br>}</li>
+<li>(void)showAlert:(NSString <em>)title msg:(NSString </em>)msg {<br>dispatch_async(dispatch_get_main_queue(), ^{<br>UIAlertView *a = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@”Ok” otherButtonTitles:nil, nil];<br>[a show];<br>});<br>}<br>@end</li>
+</ul>
+</li>
+<li>接下来，我们在controller中在webview加载完成的代理中，给JS注入模型。</li>
+<li>#pragma mark - UIWebViewDelegate<ul>
+<li>(void)webViewDidFinishLoad:(UIWebView <em>)webView {<br>self.jsContext = [webView valueForKeyPath:@”documentView.webView.mainFrame.javaScriptContext”];<br>// 通过模型调用方法，这种方式更好些。<br>HYBJsObjCModel </em>model  = [[HYBJsObjCModel alloc] init];<br>self.jsContext[@”OCModel”] = model;<br>model.jsContext = self.jsContext;<br>model.webView = self.webView;<br>self.jsContext.exceptionHandler = ^(JSContext <em>context, JSValue </em>exceptionValue) {<br>context.exception = exceptionValue;<br>NSLog(@”异常信息：%@”, exceptionValue);<br>};<br>}</li>
+</ul>
+</li>
+<li>我们是通过webView的valueForKeyPath获取的，其路径为documentView.webView.mainFrame.javaScriptContext。<br>这样就可以获取到JS的context，然后为这个context注入我们的模型对象。</li>
+<li>我们先写两个JS方法：</li>
+<li>var jsFunc = function() {<br>alert(‘Objective-C call js to show alert’);<br>}<br>var jsParamFunc = function(argument) {<br>document.getElementByIdx_x(‘jsParamFuncSpan’).innerHTML<br>= argument[‘name’];<br>}</li>
+<li>这里我们定义了两个JS方法，一个是jsFunc，不带参数。另一个是jsParamFunc，带一个参数。接下来，我们在html中的body中添加以下代码：</li>
+<li>Test how to use objective-c call js<br>现在就可以测试代码了。<br>当我们点击第一个按钮：Call<br>ObjC system camera时，<br>通过OCModel.callSystemCamera()，就可以在HTML中通过JS调用OC的方法。</li>
+<li>在OC代码中，我们的callSystemCamera方法体中，添加了以下两行代码，就是获取HTML中所定义的JS就去jsFunc，然后调用它。</li>
+<li>JSValue *jsFunc = self.jsContext[@”jsFunc”];<br>[jsFunc callWithArguments:nil];</li>
+<li>这样就可以在JS调用OC方法时，也让OC反馈给JS。看看下面传字典参数：</li>
+<li><ul>
+<li>(void)jsCallObjcAndObjcCallJsWithDict:(NSDictionary *)params {<br>NSLog(@”jsCallObjcAndObjcCallJsWithDict was called, params is %@”, params);</li>
+</ul>
+</li>
+<li><p>// 调用JS的方法</p>
+</li>
+<li>JSValue *jsParamFunc = self.jsContext[@”jsParamFunc”];<br>[jsParamFunc callWithArguments:@[@{@”age”: @10, @”name”: @”lili”, @”height”: @158}]];<br>}</li>
+<li>获取我们在HTML中定义的jsParamFunc方法，然后调用它并传了一个字典作为参数。</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/13/JS&&OC/" data-id="cj42dvtq00001najxpkg2pgi3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 
 
 </section>
