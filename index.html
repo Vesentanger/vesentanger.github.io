@@ -291,7 +291,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>#Servlet的转发<br>       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {<br>        System.out.println(“帮我办个事”);<br>        System.out.println(“不,我找个人帮你办”);<br>        // servlet转发 讲请求向下传递<br>        ServletContext application = this.getServletContext();<br>        RequestDispatcher rd = application.getRequestDispatcher(“/abc”);//括号内填写转发的目标servlet的urlPatterns<br>        rd.forward(request, response);<br>    }</p>
+        <p>&gt;<br>       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {<br>        System.out.println(“帮我办个事”);<br>        System.out.println(“不,我找个人帮你办”);<br>        // servlet转发 讲请求向下传递<br>        ServletContext application = this.getServletContext();<br>        RequestDispatcher rd = application.getRequestDispatcher(“/abc”);//括号内填写转发的目标servlet的urlPatterns<br>        rd.forward(request, response);<br>    }</p>
 
       
     </div>
