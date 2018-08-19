@@ -15,17 +15,16 @@
 
 
 
-<meta name="description" content="url uri url：统一资源定位符（网址） uri：统一资源标识符 http://localhost:8080/xxx.html-协议 主机IP 端口号 uri（当前应用的资源路径）  servlet服务端的小应用程序，作用是处理服务端的请求和相应  生命周期：实例化-&amp;gt;初始化(init)-&amp;gt;服务(service)-&amp;gt;销毁(destroy)servlet三种创建方式：1.实现">
-<meta name="keywords" content="url与servlet">
+<meta name="description" content="Cookie细节">
 <meta property="og:type" content="article">
-<meta property="og:title" content="url与servlet">
-<meta property="og:url" content="http://yoursite.com/2018/01/02/JavaEE-servlet/index.html">
+<meta property="og:title" content="Cookie">
+<meta property="og:url" content="http://yoursite.com/2018/08/19/Cookie/index.html">
 <meta property="og:site_name" content="梅守强的博客">
-<meta property="og:description" content="url uri url：统一资源定位符（网址） uri：统一资源标识符 http://localhost:8080/xxx.html-协议 主机IP 端口号 uri（当前应用的资源路径）  servlet服务端的小应用程序，作用是处理服务端的请求和相应  生命周期：实例化-&amp;gt;初始化(init)-&amp;gt;服务(service)-&amp;gt;销毁(destroy)servlet三种创建方式：1.实现">
-<meta property="og:updated_time" content="2018-01-01T23:28:10.000Z">
+<meta property="og:description" content="Cookie细节">
+<meta property="og:updated_time" content="2018-08-19T07:55:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="url与servlet">
-<meta name="twitter:description" content="url uri url：统一资源定位符（网址） uri：统一资源标识符 http://localhost:8080/xxx.html-协议 主机IP 端口号 uri（当前应用的资源路径）  servlet服务端的小应用程序，作用是处理服务端的请求和相应  生命周期：实例化-&amp;gt;初始化(init)-&amp;gt;服务(service)-&amp;gt;销毁(destroy)servlet三种创建方式：1.实现">
+<meta name="twitter:title" content="Cookie">
+<meta name="twitter:description" content="Cookie细节">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>url与servlet | 梅守强的博客</title>
+<title>Cookie | 梅守强的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,11 +256,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-JavaEE-servlet" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Cookie" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/01/02/JavaEE-servlet/" class="article-date">
-      <time datetime="2018-01-01T23:21:57.000Z" itemprop="datePublished">2018-01-02</time>
+      <a href="/2018/08/19/Cookie/" class="article-date">
+      <time datetime="2018-08-19T07:53:34.000Z" itemprop="datePublished">2018-08-19</time>
 </a>
 
 
@@ -276,7 +275,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      url与servlet
+      Cookie
     </h1>
   
 
@@ -285,15 +284,11 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JavaEE小知识/">JavaEE小知识</a>
+    <a class="article-category-link" href="/categories/url与servlet/">url与servlet</a>
     </div>
 
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url与servlet/">url与servlet</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -301,16 +296,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="url-uri"><a href="#url-uri" class="headerlink" title="url uri"></a>url uri</h2><blockquote>
-<p>url：统一资源定位符（网址）</p>
-<p>uri：统一资源标识符</p>
-<p><a href="http://localhost:8080/xxx.html" target="_blank" rel="external">http://localhost:8080/xxx.html</a><br>-<br>协议 主机IP 端口号 uri（当前应用的资源路径）</p>
-</blockquote>
-<h2 id="servlet"><a href="#servlet" class="headerlink" title="servlet"></a>servlet</h2><p>服务端的小应用程序，作用是处理服务端的请求和相应</p>
-<blockquote>
-<p>生命周期：<br>实例化-&gt;初始化(init)-&gt;服务(service)-&gt;销毁(destroy)<br>servlet三种创建方式：<br>1.实现javax.servlet.Servlet接口<br>2.继承javax.servlet.GenericServlet类(适配器模式)<br>3.继承javax.servelt.Http.HttpServlet类(模板方法设计模式)</p>
-</blockquote>
-<p>线程安全：不使用全局变量，使用局部变量</p>
+        <p>##Cookie细节</p>
+<ul>
+<li>一个Cookie只能标识一种信息，它至少含有一个标识该信息的名称（name）和值（value）。</li>
+<li>一个web站点可以给一个web浏览器发送多个Cookie，一个web浏览器也可以存储多个web站点提供的Cookie。</li>
+<li><p>浏览器一般只允许存放300个Cookie，每个站点最多存放20个Cookie，每个Cookie的大小限制为4KB。</p>
+</li>
+<li><p>如果创建了一个Cookie，并将他发送到浏览器，默认情况下它是一个会话级别的Cookie（即存储在浏览器的内存中），用户退出浏览器之后即被删除。若希望浏览器将该Cookie存储在磁盘上，则需要使用maxAge，并给出一个以秒为单位的时间。将最大时效设为0则是命令浏览器删除该Cookie。</p>
+</li>
+<li>注意，删除Cookie时，path必须一致，否则不会删除。</li>
+</ul>
 
       
     </div>
@@ -319,13 +314,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/01/02/JavaEE-servlet/">url与servlet</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/19/Cookie/">Cookie</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梅守强</a></p>
-        <p><span>发布时间:</span>2018-01-02, 07:21:57</p>
-        <p><span>最后更新:</span>2018-01-02, 07:28:10</p>
+        <p><span>发布时间:</span>2018-08-19, 15:53:34</p>
+        <p><span>最后更新:</span>2018-08-19, 15:55:28</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/01/02/JavaEE-servlet/" title="url与servlet">http://yoursite.com/2018/01/02/JavaEE-servlet/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/01/02/JavaEE-servlet/　　作者: 梅守强" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/19/Cookie/" title="Cookie">http://yoursite.com/2018/08/19/Cookie/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/19/Cookie/　　作者: 梅守强" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -337,16 +332,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/05/02/SummaryOfMayDay/">
-                    
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/13/JS&&OC/">
-                    关于JavaScriptCore (iOS中OC与JS交互)
+                <a href="/2018/06/19/yumeng/">
+                    糟了，是心肌梗塞的感觉
                 </a>
             </div>
         
@@ -358,7 +347,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#url-uri"><span class="toc-number">1.</span> <span class="toc-text">url uri</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#servlet"><span class="toc-number">2.</span> <span class="toc-text">servlet</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -394,7 +383,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"url与servlet　| 梅守强的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Cookie　| 梅守强的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -428,15 +417,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/05/02/SummaryOfMayDay/" title="上一篇: ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/13/JS&&OC/" title="下一篇: 关于JavaScriptCore (iOS中OC与JS交互)">
+            <a href="/2018/06/19/yumeng/" title="下一篇: 糟了，是心肌梗塞的感觉">
                 <i class="fa fa-angle-right"></i>
             </a>
         
