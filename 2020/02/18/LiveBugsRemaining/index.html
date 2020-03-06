@@ -15,15 +15,16 @@
 
 
 
-<meta name="description" content="一只iOS开发小白~">
-<meta property="og:type" content="website">
+<meta name="description" content="#直播剩余bug 连麦有回音（全平台更新后进一步确认） 例如： 1.    「 厦门运营-杜雅妮: axbyy （1）课程信息：3月3日晚上7:00-8:30 （2）老师账号：18664743697 （3）学员账号：13560306387 安卓 （4）问题：老师带了耳塞还是有回音，我们测试了一下，把孩子的声音禁掉，结果发现禁止了一个学生后，就没回音了，但是也不能一直禁止这个孩子的麦，孩子就没办法发">
+<meta property="og:type" content="article">
 <meta property="og:title" content="梅守强的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/07/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/LiveBugsRemaining/index.html">
 <meta property="og:site_name" content="梅守强的博客">
-<meta property="og:description" content="一只iOS开发小白~">
+<meta property="og:description" content="#直播剩余bug 连麦有回音（全平台更新后进一步确认） 例如： 1.    「 厦门运营-杜雅妮: axbyy （1）课程信息：3月3日晚上7:00-8:30 （2）老师账号：18664743697 （3）学员账号：13560306387 安卓 （4）问题：老师带了耳塞还是有回音，我们测试了一下，把孩子的声音禁掉，结果发现禁止了一个学生后，就没回音了，但是也不能一直禁止这个孩子的麦，孩子就没办法发">
+<meta property="og:updated_time" content="2020-03-06T09:30:54.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梅守强的博客">
-<meta name="twitter:description" content="一只iOS开发小白~">
+<meta name="twitter:description" content="#直播剩余bug 连麦有回音（全平台更新后进一步确认） 例如： 1.    「 厦门运营-杜雅妮: axbyy （1）课程信息：3月3日晚上7:00-8:30 （2）老师账号：18664743697 （3）学员账号：13560306387 安卓 （4）问题：老师带了耳塞还是有回音，我们测试了一下，把孩子的声音禁掉，结果发现禁止了一个学生后，就没回音了，但是也不能一直禁止这个孩子的麦，孩子就没办法发">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2016/7 | 梅守强的博客</title>
+<title>梅守强的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,8 +66,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -255,56 +256,219 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-LiveBugsRemaining" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/13/JS&&OC/" class="archive-article-date">
-      <time datetime="2016-07-13T09:01:38.000Z" itemprop="datePublished">07-13</time>
+    <div class="article-meta">
+      <a href="/2020/02/18/LiveBugsRemaining/" class="article-date">
+      <time datetime="2020-02-18T02:14:22.048Z" itemprop="datePublished">2020-02-18</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/13/JS&&OC/">关于JavaScriptCore (iOS中OC与JS交互)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JS交互/">JS交互</a>
+        <p>#直播剩余bug</p>
+<p>连麦有回音（全平台更新后进一步确认）</p>
+<pre><code>例如：
+1.    「 厦门运营-杜雅妮: axbyy
+（1）课程信息：3月3日晚上7:00-8:30
+（2）老师账号：18664743697
+（3）学员账号：13560306387 安卓
+（4）问题：老师带了耳塞还是有回音，我们测试了一下，把孩子的声音禁掉，结果发现禁止了一个学生后，就没回音了，但是也不能一直禁止这个孩子的麦，孩子就没办法发言了 」
+- - - - - - - - - - - - - - -
+
+2.    「 运营经理-宋洪丰: Lori English【yhle】客户服务群
+老师：adminyhle
+iPad  pro
+学生：ipad
+15364021662 iOS进入过房间 实际是安卓上课
+
+3月3日，4.00-5.50的课
+直播课老师一直听见自己有回音，其余学生没有听见，这个学生话筒打开就有回音 」
+- - - - - - - - - - - - - - -
+@运营经理-宋洪丰 昨天不是报过么，这个学生戴耳麦也不行是么&quot;
+- - - - - - - - - - - - - - -
+
+3.    「 运营-彭乾: 机构代码 hzslyy
+主讲老师账号 Mike001
+学员账号18968122952 iPad mini 4 (WiFi)(11.4)
+课程时间 7：30-8：30
+具体问题描述  一对多直播课，上课回音问题严重 」
+- - - - - - - - - - - - - - -
+
+20200304
+4.    「 运营-彭乾: 机构代码：bjxyd
+主讲老师账号：135 5272 1105
+学员账号：186 1002 5088 136 1118 3382
+课程时间：3月3号周二晚上19点。
+具体问题描述：上课期间，学生回答问题的时候有回音。 」
+- - - - - - - - - - - - - - -
+</code></pre><p>课件看不到（全平台更新后进一步确认）</p>
+<pre><code>例如：
+1.    「运营-许慧：机构：英卓英语(hbyz)
+老师账号：13343342882 
+学员账号：18031667611
+问题：老师上直播课打开课件，学员端看不到，学员端画面如下图，麻烦帮忙确认处理下，非常感    谢[Fight]」
+</code></pre><p>看不到画面但可以听到声音</p>
+<pre><code>例如：
+「 运营~王烨: 加州国际英语（jzgj）
+老师账号：15595661726
+学生账号：13976897955
+课程名：周六下午朗文2A精读
+现象：学生的的相机功能权限已经打开了，但在上课期间还是看不到孩子，只能听到孩子的声音，    其他孩子也看不到这位孩子的画面。麻烦帮忙协助看一下 」
+- - - - - - - - - - - - - - -
+</code></pre><p>PC直播卡顿换移动设备后回放只有PC那部分</p>
+<pre><code>已改，测试中
+</code></pre><p>卡顿</p>
+<pre><code>各种各样的网络状态问题（看不到头像、听不到声音等...）
+</code></pre><p>闪退</p>
+<pre><code>iOS和PC比较多，有一部分是设备原因；iOS有部分用户闪退，原因难以定位，需要全面更新后再看看
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2020/02/18/LiveBugsRemaining/"></a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">梅守强</a></p>
+        <p><span>Created:</span>2020-02-18, 10:14:22</p>
+        <p><span>Updated:</span>2020-03-06, 17:30:54</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/18/LiveBugsRemaining/" title="">http://yoursite.com/2020/02/18/LiveBugsRemaining/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2020/02/18/LiveBugsRemaining/　　By 梅守强" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
     </div>
 
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/02/18/2019-nCoV-bugs-iOS/">
+                    
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/02/18/LiveNeedSolved/">
+                    
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
 
     
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| 梅守强的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2136835';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2020/02/18/2019-nCoV-bugs-iOS/" title="Pre: ">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/02/18/LiveNeedSolved/" title="Next: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/18/2019-nCoV-bugs-iOS/">2019-nCoV-bugs-iOS</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/18/LiveBugsRemaining/">LiveBugsRemaining</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/18/LiveNeedSolved/">LiveNeedSolved</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/Cookie/">Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/18/ServletDispatcher/">servlet的转发(dispatcher)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/02/SummaryOfMayDay/">SummaryOfMayDay</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/02/JavaEE-servlet/">url与servlet</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/JS&&OC/">关于JavaScriptCore (iOS中OC与JS交互)</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
